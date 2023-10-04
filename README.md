@@ -57,7 +57,7 @@ code blocks for commands
 
 ## Predictive Learning 
 
-* Topological Summaries Classification - Multilayer Perceptron Layers
+* Topological Summaries Classification - Multilayer Perceptron
 ```
 code blocks for commands
 ```
