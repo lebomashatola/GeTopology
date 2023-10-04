@@ -14,10 +14,10 @@ GeTopology processes RNA-Seq files (.fastq), microarray files (.CEL) and tissue 
 ### Required Software
 
 * Unix OS 
-* fastQC (v0.12.0)
-* Trimmomatics (v0.36)
-* Hisat2 (v2.2.1)
-* HTSeq (v2.0.3)
+* fastQC (v0.12.0) [https://htseq.readthedocs.io/en/master/install.html](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)) 
+* Trimmomatics (v0.36) [](http://www.usadellab.org/cms/?page=trimmomatic)
+* Hisat2 (v2.2.1) []([https://htseq.readthedocs.io/en/master/install.html](https://github.com/DaehwanKimLab/hisat2))
+* HTSeq (v2.0.3) [](https://htseq.readthedocs.io/en/master/install.html)
 
 ### Installing Dependencies
 
