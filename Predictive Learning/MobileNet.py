@@ -148,9 +148,50 @@ class Prediction_Histology:
 
 if __name__ == '__main__':
 
+    resent_preprocess = tf.keras.applications.resnet_v2.preprocess_input
+    nasnet_preprocess = tf.keras.applications.nasnet.preprocess_input
     mobile_preprocess = tf.keras.applications.mobilenet.preprocess_input
-    mobileNet = tf.keras.applications.mobilenet.MobileNet()
-    hist_mobile = Prediction_Histology(mobile_preprocess, (224,224), mobileNet, -6, 'Mobile')
+    incept_preprocess = tf.keras.applications.inception_resnet_v2.preprocess_input
 
-    for j in range(5):
-        hist_mobile.process()
+    resnet = tf.keras.applications.ResNet152V2()
+    nesnet = tf.keras.applications.NASNetLarge()
+    mobileNet = tf.keras.applications.mobilenet.MobileNet()
+    incept = tf.keras.applications.InceptionResNetV2()
+
+    hist_mobile = Prediction_Histology(mobile_preprocess, (224,224), mobileNet, -6, 'Mobile')
+    hist_resnet = Prediction_Histology(resent_preprocess, (224,224), resnet, -2, 'ResNet')
+    hist_nesnet = Prediction_Histology(nasnet_preprocess, (331,331), nesnet, -2, 'NesNet')
+    hist_incept = Prediction_Histology(incept_preprocess, (299,299), incept, -2, 'InceptNet')
+
+    while True:
+        
+        print(" GeTopology (v0.1) \n Welcome to Phenotype Prediction using Transfer Learning on WSI!")
+        print("###################################")
+        opt = input('Select option: \n 1. ResNet \n 2. NasNet \n 3. MobileNet \n 4. Incept \n 5. Exit \n : ')
+
+        if opt == 1:
+            folds = input('Enter number of cross-validation folds to compute: ')
+            for j in range(folds):
+                hist_resnet.process()
+                print('fold number ' + j + ' complete!')
+
+        if opt == 2:
+            folds = input('Enter number of cross-validation folds to compute: ')
+            for j in range(folds):
+                hist_nesnet.process()
+                print('fold number ' + j + ' complete!')
+
+        if opt == 3:
+            folds = input('Enter number of cross-validation folds to compute: ')
+            for j in range(folds):
+                hist_mobile.process()
+                print('fold number ' + j + ' complete!')
+
+        if opt == 4:
+            folds = input('Enter number of cross-validation folds to compute: ')
+            for j in range(folds):
+                hist_incept.process()
+                print('fold number ' + j + ' complete!')
+
+        if opt == 5:
+            break

@@ -171,13 +171,13 @@ class Prediction:
         return np.column_stack((self.samplelandscape1img, self.samplelandscape2img))
 
 
-    def MLP_Model(self, image_train, image_test):
+    def MLP_Model(self, image_train):
          """Training a MLP neural network classifier
             :return:saved MLP neural weights 
         """
         bst = MLPClassifier(random_state=1, activation='logistic', learning_rate=0.001, max_iter=300, validation_fraction=0.1)
         bst.fit(image_train, self.train_labs)
-        joblib.dump(bst, self.output_dir_XGBoost) #save model
+        joblib.dump(bst, self.output_dir_MLP) #save model
 
     def test_MLP_Model(self, image_test, patient_number):
         """Testing a MLP neural network classifier
@@ -201,22 +201,73 @@ class Prediction:
 
 if __name__ == '__main__':
 
-    resistance = Preprocess("/dir/Resistance.pkl")
-    resistance_patients = resistance.preprocess("R") 
+    while True:
+        
+        print(" GeTopology (v0.1) \n Welcome to Phenotype Prediction on Topological Summaries!")
+        print("###################################")
+        opt = input('Select option: \n 1. Compute Distance Correlation \n 2. Compute signed-TOM \n 3. Compute Training Topological Summaries for Patients \n 4. Compute Testing Topological Summaries for Patients \n 5. Perform Model Training \n 6. Perform Model Testing \n 7. Exit \n : ')
 
-    sensitive = Preprocess("/dir/documents/Sensitive.pkl")
-    sensitive_patients = sensitive.preprocess("S") 
+        if opt == 1:
 
-    prediction = Prediction(cancer_patients, normal_patients, "dir/MLP_Model.json")
-    X_train, X_test = prediction.split() 
-    
-    prediction.intergene_correlation_measure() 
-    prediction.intergenes_signed_TOM() 
-    
-    prediction.plot_corr() 
-    
-    Train_samples = prediction.PersistentHomology(X_train, 50) #Change Percentile persisting features
-    Test_samples = prediction.PersistentHomology(X_test, 50) #Change Percentile persisting features
+            res_path = input('Input full file path directory for resistance pickle file \n : ')
+            resistance = Preprocess(res_path) #Format input gene expression path
+            resistance_patients = resistance.preprocess("R")
+            
+            sen_path = input('Input full file path directory for sensitive pickle file \n : ')
+            sensitive = Preprocess(sen_path) #Format input gene expression path
+            sensitive_patients = sensitive.preprocess("S") 
+            
+            save_path = str(input('Enter directory to save trained model \n : '))
+            prediction = Prediction(cancer_patients, normal_patients, save_path)
+            X_train, X_test = prediction.split() 
+            prediction.intergene_correlation_measure()
 
-    prediction.MLP_Model(Train_samples, Test_samples) 
-    prediction.test_MLP_Model(Test_samples, 10) #Select patient number you want to evaluate
+            print('Process Completed! \n ')
+
+        if opt == 2:
+
+            res_path = input('Input full file path directory for resistance pickle file \n : ')
+            resistance = Preprocess(res_path) #Format input gene expression path
+            resistance_patients = resistance.preprocess("R")
+            
+            sen_path = input('Input full file path directory for sensitive pickle file \n : ')
+            sensitive = Preprocess(sen_path) #Format input gene expression path
+            sensitive_patients = sensitive.preprocess("S") 
+            
+            save_path = str(input('Enter directory to save trained model \n : '))
+            prediction = Prediction(cancer_patients, normal_patients, save_path)
+            X_train, X_test = prediction.split() 
+            prediction.intergene_signed_TOM()
+
+            print('Process Completed! \n ')
+
+        if opt == 3:
+            betti = int(input("Enter top percentile of topological features \n :"))
+            
+            try:
+                Train_samples = prediction.PersistentHomology(X_train, betti)
+                print('Process Complete! \n')
+            except:
+                print('Invalid percentile (Enter value 0-100)')
+                print('Process Complete! \n')
+            
+    
+        if opt == 4:
+            betti = int(input("Enter top percentile of topological features \n :"))
+            Test_samples = prediction.PersistentHomology(X_test, betti)
+            print('Process Complete! \n')
+
+        if opt == 5:
+            prediction.MLP_Model(Train_samples, Test_samples)
+            print('Process Complete! \n')
+
+        if opt == 6:
+            patient_num = int(input("Enter patient number \n :"))
+            
+            try:
+                prediction.test_MLP_Model(Test_samples, patient_num)
+            except:
+                print('Invalid Patient Number (Select value between 1-10)')
+
+        if opt == 7:
+            break
