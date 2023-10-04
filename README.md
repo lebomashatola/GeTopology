@@ -76,8 +76,8 @@ code blocks for commands
 
 Contributors names and contact info
 
-ex. Lebohang Mashatola  
-ex. [681452@students.wits.ac.za](681452@students.wits.ac.za)
+Lebohang Mashatola  
+[681452@students.wits.ac.za](681452@students.wits.ac.za)
 
 ## Version History
 
