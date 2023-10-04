@@ -28,7 +28,7 @@ Rscript requirements.r
 ```
 code blocks for commands
 ```
-* Microarray Processing - RMA normalization CEL files, forming a Gene Expression Matrix
+* Microarray Processing - RMA normalization of CEL files, forming a Gene Expression Matrix
 ```
 code blocks for commands
 ```
