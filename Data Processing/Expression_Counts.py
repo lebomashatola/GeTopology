@@ -53,8 +53,20 @@ class Expression:
 
 if __name__ == '__main__':
 
-    resistance = Expression("/dir/Resistance", "Resistance")
-    resistance.read_files_create_dataframe()
+    while True:
+        
+        print(" GeTopology (v0.1) \n Welcome to HTSeq Count Processing!")
+        print("###################################")
+        opt = input('Select option: \n 1. Resistance Patients \n 2. Sensitive Patients \n 3. Exit \n : ')
 
-    sensitive = Expression("/dir/Sensitive", "Sensitive")
-    sensitive.read_files_create_dataframe()
+        if opt == 1:
+            dire = input('Enter resistance patients directory \n : ')
+            resistance = Expression(dire)
+            resistance.read_files_create_dataframe()
+            print('Process Complete!')
+
+        if opt == 2:
+            dire = input('Enter resistance patients directory \n : ')
+            sensitive = Expression(dire)
+            sensitive.read_files_create_dataframe()
+            print('Process Complete!')

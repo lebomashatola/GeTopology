@@ -126,3 +126,34 @@ if __name__ == '__main__':
     exp.align_star()
     exp.align_QC()
     exp.count()
+
+    while True:
+        
+        print(" GeTopology (v0.1) \n Welcome to RNA-Seq Processing!")
+        print("###################################")
+        opt = input('Select option: \n 1. FastQC \n 2. Trim Adaptor Seq \n 3. Run STAR \n 4. Run Alignment QC \n 5. Get Counts \n 6. Exit \n : ')
+
+        if opt == 1:
+            exp.fastqc()
+            print('Process Complete! \n')
+
+        if opt == 2:
+            exp.trimmomatics()
+            exp.finish()
+            print('Process Complete! \n')
+    
+        if opt == 3:
+            exp.build_star()
+            exp.align_star()
+            print('Process Complete! \n')
+
+        if opt == 4:
+            exp.align_QC()
+            print('Process Complete! \n')
+
+        if opt == 5:
+            exp.count()
+            print('Process Complete! \n')
+
+        if opt == 6:
+            break

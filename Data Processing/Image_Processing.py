@@ -56,10 +56,34 @@ class Image:
 
 if __name__ == '__main__':
 
-    Read_Imgs_Stg1 = Image("/dir/Images_Stage_1", "/dir/stage_1", "/dir/stg_1")
-    Read_Imgs_Stg1.segmentation_tiling()
-    Read_Imgs_Stg1.move_images()
+    while True:
+        
+        print(" GeTopology (v0.1) \n Welcome to WSI Image Processing!")
+        print("###################################")
+        opt = input('Select option: \n 1. Process Stage 1 \n 2. Process Stage 4 \n 3. Process both stages \n 4. Exit \n : ')
 
-    Read_Imgs_Stg4 = Image("/dir/Images_Stage_4", "/dir/stage_4", "/dir/stg_4")
-    Read_Imgs_Stg4.segmentation_tiling()
-    Read_Imgs_Stg4.move_images()
+        if opt == 1:
+            Read_Imgs_Stg1 = Image("/dir/Images_Stage_1", "/dir/stage_1", "/dir/stg_1")
+            Read_Imgs_Stg1.segmentation_tiling()
+            Read_Imgs_Stg1.move_images()
+            print('Process Complete! \n')
+
+        if opt == 2:
+            Read_Imgs_Stg4 = Image("/dir/Images_Stage_4", "/dir/stage_4", "/dir/stg_4")
+            Read_Imgs_Stg4.segmentation_tiling()
+            Read_Imgs_Stg4.move_images()
+            print('Process Complete! \n')
+    
+        if opt == 3:
+            Read_Imgs_Stg1 = Image("/dir/Images_Stage_1", "/dir/stage_1", "/dir/stg_1")
+            Read_Imgs_Stg1.segmentation_tiling()
+            Read_Imgs_Stg1.move_images()
+            print('Complete Stage 1 \n')
+
+            Read_Imgs_Stg4 = Image("/dir/Images_Stage_4", "/dir/stage_4", "/dir/stg_4")
+            Read_Imgs_Stg4.segmentation_tiling()
+            Read_Imgs_Stg4.move_images()
+            print('Complete Stage 4 \n')
+
+        if opt == 4:
+            break
