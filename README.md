@@ -76,11 +76,9 @@ code blocks for commands
 
 Contributors names and contact info
 
-Lebohang Mashatola  
-[681452@students.wits.ac.za](681452@students.wits.ac.za)
+Lebohang Mashatola  [681452@students.wits.ac.za](681452@students.wits.ac.za)
 
-Mandeep kaur
-[Mandeep.Kaur@wits.ac.za](Mandeep.Kaur@wits.ac.za)
+Mandeep kaur [Mandeep.Kaur@wits.ac.za](Mandeep.Kaur@wits.ac.za)
 
 ## Version History
 
