@@ -378,20 +378,54 @@ class Prediction:
 
 if __name__ == '__main__':
 
-    resistance = Preprocess("/dir/Resistance.pkl") #Format input gene expression path
-    resistance_patients = resistance.preprocess("R") 
+    while True:
+        
+        print(" GeTopology (v0.1) \n Welcome to Topological Data Analysis!")
+        print("###################################")
+        opt = input('Select option: \n 1. Compute Distance Correlation \n 2. Compute signed-TOM \n 3. Compute Topological Summaries for Patients \n 4. Generate and Save Topological Summaries \n 5. Exit \n : ')
 
-    sensitive = Preprocess("/dir/Sensitive.pkl") #Format input gene expression path
-    sensitive_patients = sensitive.preprocess("S") 
+        if opt == 1:
 
-    prediction = Prediction(resistance_patients, sensitive_patients)
-    X_train, X_test = prediction.split() 
+            res_path = input('Input full file path directory for resistance pickle file \n : ')
+            resistance = Preprocess(res_path) #Format input gene expression path
+            resistance_patients = resistance.preprocess("R")
+            
+            sen_path = input('Input full file path directory for sensitive pickle file \n : ')
+            sensitive = Preprocess(sen_path) #Format input gene expression path
+            sensitive_patients = sensitive.preprocess("S") 
+            
+            prediction = Prediction(resistance_patients, sensitive_patients)
+            X_train, X_test = prediction.split() 
+            prediction.intergene_correlation_measure()
 
-    prediction.intergene_correlation_measure() 
-    prediction.intergene_signed_TOM() 
+            print('Process Completed! \n ')
+
+        if opt == 2:
+
+            res_path = input('Input full file path directory for resistance pickle file \n : ')
+            resistance = Preprocess(res_path) #Format input gene expression path
+            resistance_patients = resistance.preprocess("R")
+            
+            sen_path = input('Input full file path directory for sensitive pickle file \n : ')
+            sensitive = Preprocess(sen_path) #Format input gene expression path
+            sensitive_patients = sensitive.preprocess("S") 
+            
+            prediction = Prediction(resistance_patients, sensitive_patients)
+            X_train, X_test = prediction.split() 
+            prediction.intergene_signed_TOM()
+
+            print('Process Completed! \n ')
+
+        if opt == 3:
+            Train_samples = prediction.PHomology(X_train, 'train') 
+            Test_samples = prediction.PHomology(X_test, 'test') 
+            print('Process Complete! \n')
     
-    Train_samples = prediction.PHomology(X_train, 'train') 
-    Test_samples = prediction.PHomology(X_test, 'test') 
+        if opt == 4:
+            out_path = input('Input full file path directory for output directory for topological summary \n : ')
+            os.system("mkdir " + out_path) #Format output folder path
+            process_images('/dir/Images') 
+            print('Process Complete! \n')
 
-    os.system("mkdir /dir/Images") #Format output folder path
-    process_images('/dir/Images') 
+        if opt == 5:
+            break
