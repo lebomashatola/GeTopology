@@ -1,6 +1,4 @@
-# Project Title
-
-GeTopology - Bimodal Phenotype Prediction
+# GeTopology - Bimodal Phenotype Prediction
 
 ## Description
 
@@ -8,13 +6,13 @@ GeTopology processes RNA-Seq files (.fastq), microarray files (.CEL) and tissue 
 
 ## Getting Started
 
-### Dependencies
+### Programming Languages Required
 
 * Python>=3.9 
 * R>=4.0
 * Unix OS 
 
-### Installing
+### Installing Dependencies
 
 ```
 python -m pip install -r requirements.txt
@@ -24,47 +22,66 @@ python -m pip install -r requirements.txt
 Rscript requirements.r
 ```
 
-* Any modifications needed to be made to files/folders
-
 ### Executing program
-
-* How to run the program
-* Step-by-step bullets
+## Dataa Processing
+* Image Processing 
+```
+code blocks for commands
+```
+* Microarray Processing 
 ```
 code blocks for commands
 ```
 
-## Help
-
-Any advise for common problems or issues.
+* RNA-Seq Processing 
 ```
-command to run if program contains helper info
+code blocks for commands
+```
+## Gene Preselection
+
+* Limma 
+```
+code blocks for commands
+```
+* DESeq2 
+```
+code blocks for commands
+```
+
+## Data Encoding
+
+* Topological Data Analysis 
+```
+code blocks for commands
+```
+
+## Predictive Learning 
+
+* Topological Summaries Classification
+```
+code blocks for commands
+```
+
+* Image Classification
+```
+code blocks for commands
+```
+
+* Bimodal Classification
+```
+code blocks for commands
 ```
 
 ## Authors
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+ex. Lebohang Mashatola  
+ex. [681452@students.wits.ac.za](681452@students.wits.ac.za)
 
 ## Version History
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
 
-## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
