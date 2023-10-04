@@ -10,7 +10,14 @@ GeTopology processes RNA-Seq files (.fastq), microarray files (.CEL) and tissue 
 
 * Python >= 3.9 
 * R >= 4.0
+
+### Required Software
+
 * Unix OS 
+* fastQC (v0.12.0)
+* Trimmomatics (v0.36)
+* Hisat2 (v2.2.1)
+* HTSeq (v2.0.3)
 
 ### Installing Dependencies
 
