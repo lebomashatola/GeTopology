@@ -1,2 +1,0 @@
-# GeTopology
-GeTopology
