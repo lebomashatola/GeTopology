@@ -28,12 +28,12 @@ Rscript requirements.r
 ```
 code blocks for commands
 ```
-* Microarray Processing - RMA normalization CEL files 
+* Microarray Processing - RMA normalization CEL files, forming a Gene Expression Matrix
 ```
 code blocks for commands
 ```
 
-* RNA-Seq Processing - HTSeq counts
+* RNA-Seq Processing - Combining HTSeq counts forming a Gene Expression Matrix
 ```
 code blocks for commands
 ```
