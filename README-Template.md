@@ -10,12 +10,13 @@ GeTopology processes RNA-Seq files (.fastq), microarray files (.CEL) and tissue 
 
 ### Dependencies
 
-* Python packages: Gudhi, PyHIST, Tensorflow
-* Unix System 
+* Python packages: dcor, Gudhi, PyHIST, Tensorflow, Keras, Scikit-Learn
+* R packages: DEseq2, Limma, WGCNA, ClusterProfiler
+* Unix OS 
 
 ### Installing
 
-* How/where to download your program
+* pip install <package_name>
 * Any modifications needed to be made to files/folders
 
 ### Executing program
