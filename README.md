@@ -2,7 +2,7 @@
 
 ## Description
 
-GeTopology processes RNA-Seq files (.fastq), microarray files (.CEL) and tissue slide images (.SVS), performs shape encoding on gene expression data suing TDA, and performs a predictive learning task using a bimodal approach using convolutional and multilayer perceptron neural networks to predict phenotype. 
+GeTopology processes RNA-Seq files (.fastq), microarray files (.CEL) and tissue slide images (.SVS), performs shape encoding on gene expression data using TDA, and performs a predictive learning task using a bimodal approach using convolutional and multilayer perceptron neural networks to predict phenotype. 
 
 ## Getting Started
 
