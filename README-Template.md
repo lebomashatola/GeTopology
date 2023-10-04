@@ -10,8 +10,8 @@ GeTopology processes RNA-Seq files (.fastq), microarray files (.CEL) and tissue 
 
 ### Dependencies
 
-* Python=3.9 
-* R packages: DEseq2, Limma, WGCNA, ClusterProfiler
+* Python>=3.9 
+* R>=4.0
 * Unix OS 
 
 ### Installing
