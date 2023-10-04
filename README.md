@@ -8,8 +8,8 @@ GeTopology processes RNA-Seq files (.fastq), microarray files (.CEL) and tissue 
 
 ### Programming Languages Required
 
-* Python>=3.9 
-* R>=4.0
+* Python >= 3.9 
+* R >= 4.0
 * Unix OS 
 
 ### Installing Dependencies
@@ -24,26 +24,26 @@ Rscript requirements.r
 
 ### Executing program
 ## Data Processing
-* Image Processing 
+* Image Processing - Image Segmentation and Tiling
 ```
 code blocks for commands
 ```
-* Microarray Processing 
+* Microarray Processing - RMA normalization CEL files 
 ```
 code blocks for commands
 ```
 
-* RNA-Seq Processing 
+* RNA-Seq Processing - HTSeq counts
 ```
 code blocks for commands
 ```
 ## Gene Preselection
 
-* Limma 
+* Limma - WGCNA
 ```
 code blocks for commands
 ```
-* DESeq2 
+* DESeq2 - WGCNA 
 ```
 code blocks for commands
 ```
@@ -57,17 +57,17 @@ code blocks for commands
 
 ## Predictive Learning 
 
-* Topological Summaries Classification
+* Topological Summaries Classification - Multilayer Perceptron Layers
 ```
 code blocks for commands
 ```
 
-* Image Classification
+* Image Classification - Convolutional Neural Networks
 ```
 code blocks for commands
 ```
 
-* Bimodal Classification
+* Bimodal Classification 
 ```
 code blocks for commands
 ```
