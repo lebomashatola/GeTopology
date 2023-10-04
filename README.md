@@ -67,7 +67,7 @@ code blocks for commands
 code blocks for commands
 ```
 
-* Bimodal Classification 
+* Bimodal Classification (MLP & CNN)
 ```
 code blocks for commands
 ```
