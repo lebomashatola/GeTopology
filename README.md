@@ -14,9 +14,6 @@ GeTopology processes RNA-Seq files (.fastq), microarray files (.CEL) and tissue 
 
 ### Installing Dependencies
 
-```
-python -m pip install -r requirements.txt
-```
 
 ```
 python3 -m pip install -r requirements.txt
