@@ -1,17 +1,17 @@
 # Project Title
 
-Simple overview of use/purpose.
+GeTopology - Bimodal Phenotype Prediction
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+GeTopology processes RNA-Seq files (.fastq), microarray files (.CEL) and tissue slide images (.SVS), performs shape encoding on gene expression data suing TDA, and performs a predictive learning task using a bimodal approach using convolutional and multilayer perceptron neural networks to predict phenotype. 
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Python packages: Gudhi, PyHIST, Tensorflow
+* Unix System 
 
 ### Installing
 
