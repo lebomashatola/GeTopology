@@ -23,7 +23,7 @@ Rscript requirements.r
 ```
 
 ### Executing program
-## Dataa Processing
+## Data Processing
 * Image Processing 
 ```
 code blocks for commands
