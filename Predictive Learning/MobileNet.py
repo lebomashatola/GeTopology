@@ -167,7 +167,7 @@ if __name__ == '__main__':
         
         print(" GeTopology (v0.1) \n Welcome to Phenotype Prediction using Transfer Learning on WSI!")
         print("###################################")
-        opt = input('Select option: \n 1. ResNet \n 2. NasNet \n 3. MobileNet \n 4. Incept \n 5. Exit \n : ')
+        opt = int(input('Select option: \n 1. ResNet \n 2. NasNet \n 3. MobileNet \n 4. Incept \n 5. Exit \n : '))
 
         if opt == 1:
             folds = input('Enter number of cross-validation folds to compute: ')
