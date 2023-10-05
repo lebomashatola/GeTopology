@@ -34,16 +34,21 @@ Rscript requirements.r
 ## Data Processing
 * Image Processing - Image Segmentation and Tiling
 ```
-code blocks for commands
+python Image_Processing.py
 ```
 * Microarray Processing - RMA normalization of CEL files, forming a Gene Expression Matrix
 ```
 code blocks for commands
 ```
 
+* RNA-Seq Processing - Process .fastq files
+```
+python RNA-Seq_Processing.py
+```
+
 * RNA-Seq Processing - Combining HTSeq counts forming a Gene Expression Matrix
 ```
-code blocks for commands
+python Expression_Counts.py
 ```
 ## Gene Preselection
 
