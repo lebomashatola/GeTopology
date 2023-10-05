@@ -60,7 +60,7 @@ if __name__ == '__main__':
         
         print(" GeTopology (v0.1) \n Welcome to WSI Image Processing!")
         print("###################################")
-        opt = input('Select option: \n 1. Process Stage 1 \n 2. Process Stage 4 \n 3. Process both stages \n 4. Exit \n : ')
+        opt = int(input('Select option: \n 1. Process Stage 1 \n 2. Process Stage 4 \n 3. Process both stages \n 4. Exit \n : '))
 
         if opt == 1:
             Read_Imgs_Stg1 = Image("/dir/Images_Stage_1", "/dir/stage_1", "/dir/stg_1")
