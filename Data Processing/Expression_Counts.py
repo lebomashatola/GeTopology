@@ -57,7 +57,7 @@ if __name__ == '__main__':
         
         print(" GeTopology (v0.1) \n Welcome to HTSeq Count Processing!")
         print("###################################")
-        opt = input('Select option: \n 1. Resistance Patients \n 2. Sensitive Patients \n 3. Exit \n : ')
+        opt = int(input('Select option: \n 1. Resistance Patients \n 2. Sensitive Patients \n 3. Exit \n : '))
 
         if opt == 1:
             dire = input('Enter resistance patients directory \n : ')
