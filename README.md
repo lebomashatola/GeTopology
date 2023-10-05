@@ -38,7 +38,7 @@ python3 Image_Processing.py
 ```
 * Microarray Processing - RMA normalization of CEL files, forming a Gene Expression Matrix (Only GPL570)
 ```
-code blocks for commands
+python3 run_cels.py
 ```
 
 * RNA-Seq Processing - Process .fastq files
