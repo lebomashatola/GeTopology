@@ -300,8 +300,13 @@ class Prediction:
         Read a calculated signed-TOM across training patients
         :return: signed-TOM matrix across training patients
         """
-        self.dist = pd.read_csv(self.signedTOM, index_col=0)
-        return self.dist
+
+        try:
+            self.dist = pd.read_csv(self.signedTOM, index_col=0)
+            return self.dist
+        except:
+            print('Computing signed-TOM')
+            os.system('Rscript signed_TOM.r')
 
     def patient_correlation_measure(self, F):
          """
