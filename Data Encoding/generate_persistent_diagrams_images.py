@@ -382,7 +382,7 @@ if __name__ == '__main__':
         
         print(" GeTopology (v0.1) \n Welcome to Topological Data Analysis!")
         print("###################################")
-        opt = input('Select option: \n 1. Compute Distance Correlation \n 2. Compute signed-TOM \n 3. Compute Topological Summaries for Patients \n 4. Generate and Save Topological Summaries \n 5. Exit \n : ')
+        opt = int(input('Select option: \n 1. Compute Distance Correlation \n 2. Compute signed-TOM \n 3. Compute Topological Summaries for Patients \n 4. Generate and Save Topological Summaries \n 5. Exit \n : '))
 
         if opt == 1:
 
