@@ -23,7 +23,7 @@ GeTopology processes RNA-Seq files (.fastq), microarray files (.CEL) and tissue 
 
 
 ```
-python3 -m pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ```
@@ -34,51 +34,51 @@ Rscript requirements.r
 ## Data Processing
 * Image Processing - Image Segmentation and Tiling
 ```
-python3 Image_Processing.py
+python Image_Processing.py
 ```
 * Microarray Processing - RMA normalization of CEL files, forming a Gene Expression Matrix (Only GPL570)
 ```
-python3 run_cels.py
+python run_cels.py
 ```
 
 * RNA-Seq Processing - Process .fastq files
 ```
-python3 RNA-Seq_Processing.py
+python RNA-Seq_Processing.py
 ```
 
 * RNA-Seq Processing - Combining HTSeq counts forming a Gene Expression Matrix
 ```
-python3 Expression_Counts.py
+python Expression_Counts.py
 ```
 ## Gene Preselection
 
 * Deseq2/Limma - WGCNA
 ```
-python3 run_preselection.py
+python run_preselection.py
 ```
 
 ## Data Encoding
 
 * Topological Data Analysis
 ```
-python3 generate_persistent_diagrams_images.py
+python generate_persistent_diagrams_images.py
 ```
 
 ## Predictive Learning 
 
 * Topological Summaries Classification - Multilayer Perceptron
 ```
-python3 phenotype_prediction.py
+python phenotype_prediction.py
 ```
 
 * Image Classification - Convolutional Neural Networks
 ```
-python3 MobileNet.py
+python MobileNet.py
 ```
 
 * Bimodal Classification (MLP & CNN)
 ```
-code blocks for commands
+python integrate.py
 ```
 
 ## Authors
