@@ -52,32 +52,28 @@ python Expression_Counts.py
 ```
 ## Gene Preselection
 
-* Limma - WGCNA
+* Deseq2/Limma - WGCNA
 ```
-code blocks for commands
-```
-* DESeq2 - WGCNA 
-```
-code blocks for commands
+python run_preselection.py
 ```
 
 ## Data Encoding
 
-* Topological Data Analysis 
+* Topological Data Analysis
 ```
-code blocks for commands
+python generate_persistent_diagrams_images.py
 ```
 
 ## Predictive Learning 
 
 * Topological Summaries Classification - Multilayer Perceptron
 ```
-code blocks for commands
+python phenotype_prediction.py
 ```
 
 * Image Classification - Convolutional Neural Networks
 ```
-code blocks for commands
+python MobileNet.py
 ```
 
 * Bimodal Classification (MLP & CNN)
