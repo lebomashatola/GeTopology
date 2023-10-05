@@ -34,7 +34,7 @@ Rscript requirements.r
 ## Data Processing
 * Image Processing - Image Segmentation and Tiling
 ```
-python Image_Processing.py
+python3 Image_Processing.py
 ```
 * Microarray Processing - RMA normalization of CEL files, forming a Gene Expression Matrix
 ```
@@ -43,37 +43,37 @@ code blocks for commands
 
 * RNA-Seq Processing - Process .fastq files
 ```
-python RNA-Seq_Processing.py
+python3 RNA-Seq_Processing.py
 ```
 
 * RNA-Seq Processing - Combining HTSeq counts forming a Gene Expression Matrix
 ```
-python Expression_Counts.py
+python3 Expression_Counts.py
 ```
 ## Gene Preselection
 
 * Deseq2/Limma - WGCNA
 ```
-python run_preselection.py
+python3 run_preselection.py
 ```
 
 ## Data Encoding
 
 * Topological Data Analysis
 ```
-python generate_persistent_diagrams_images.py
+python3 generate_persistent_diagrams_images.py
 ```
 
 ## Predictive Learning 
 
 * Topological Summaries Classification - Multilayer Perceptron
 ```
-python phenotype_prediction.py
+python3 phenotype_prediction.py
 ```
 
 * Image Classification - Convolutional Neural Networks
 ```
-python MobileNet.py
+python3 MobileNet.py
 ```
 
 * Bimodal Classification (MLP & CNN)
