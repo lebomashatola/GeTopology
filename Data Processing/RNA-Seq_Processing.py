@@ -131,7 +131,7 @@ if __name__ == '__main__':
         
         print(" GeTopology (v0.1) \n Welcome to RNA-Seq Processing!")
         print("###################################")
-        opt = input('Select option: \n 1. FastQC \n 2. Trim Adaptor Seq \n 3. Run STAR \n 4. Run Alignment QC \n 5. Get Counts \n 6. Exit \n : ')
+        opt = int(input('Select option: \n 1. FastQC \n 2. Trim Adaptor Seq \n 3. Run STAR \n 4. Run Alignment QC \n 5. Get Counts \n 6. Exit \n : '))
 
         if opt == 1:
             exp.fastqc()
