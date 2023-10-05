@@ -205,7 +205,7 @@ if __name__ == '__main__':
         
         print(" GeTopology (v0.1) \n Welcome to Phenotype Prediction on Topological Summaries!")
         print("###################################")
-        opt = input('Select option: \n 1. Compute Distance Correlation \n 2. Compute signed-TOM \n 3. Compute Training Topological Summaries for Patients \n 4. Compute Testing Topological Summaries for Patients \n 5. Perform Model Training \n 6. Perform Model Testing \n 7. Exit \n : ')
+        opt = int(input('Select option: \n 1. Compute Distance Correlation \n 2. Compute signed-TOM \n 3. Compute Training Topological Summaries for Patients \n 4. Compute Testing Topological Summaries for Patients \n 5. Perform Model Training \n 6. Perform Model Testing \n 7. Exit \n : '))
 
         if opt == 1:
 
